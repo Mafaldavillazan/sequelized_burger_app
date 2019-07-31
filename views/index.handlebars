@@ -35,10 +35,10 @@
     <h2>Burgers to be devoured</h2>
     <ol class="list-group">
       <li class="list-group-item">
-           {{#each burgers}}
-        {{#unless devoured}}
-        {{> burgers/burger-block devoured=true}}
-        {{/unless}}
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block this }}
+        {{/if}}
         {{/each}}
 
       </li>
@@ -52,14 +52,14 @@
     <ol class="list-group">
       <li class="list-group-item">
         {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burger-block devoured=false}}
-        {{/if}}
+        {{#unless devoured}}
+        {{> burgers/burger-block this}}
+        {{/unless}}
         {{/each}}
       </li>
     </ol>
 
-  
+
 
   </div>
 </div>
