@@ -1,0 +1,66 @@
+<div class="card mb-3">
+
+  <div class="card-body">
+    <div class="card-title text-center">
+
+      <h1>BURGERS </h1>
+
+    </div>
+  </div>
+</div>
+
+<form class="create-form">
+  <div class="row">
+    <div class="form-group">
+    </div>
+    <div class="col-1"></div>
+    <div class="col-2">
+      <label for="bu">Burger to eat: </label>
+    </div>
+    <div class="col-6">
+      <input class="form-control form-control-lg" type="text" id="bu" name="burger">
+    </div>
+    <div class="col-2">
+      <button type="submit" class="btn btn-dark">Add Burger</button>
+    </div>
+  </div>
+</form>
+
+<br>
+<br>
+
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-4">
+    <h2>Burgers to be devoured</h2>
+    <ol class="list-group">
+      <li class="list-group-item">
+           {{#each burgers}}
+        {{#unless devoured}}
+        {{> burgers/burger-block devoured=true}}
+        {{/unless}}
+        {{/each}}
+
+      </li>
+    </ol>
+  </div>
+
+  <div class="col-1"></div>
+  <div class="col-4">
+    <h2>Burgers that are devoured</h2>
+
+    <ol class="list-group">
+      <li class="list-group-item">
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devoured=false}}
+        {{/if}}
+        {{/each}}
+      </li>
+    </ol>
+
+  
+
+  </div>
+</div>
+</div>
