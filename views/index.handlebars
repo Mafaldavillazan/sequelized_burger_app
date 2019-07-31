@@ -36,9 +36,9 @@
     <ol class="list-group">
       <li class="list-group-item">
         {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burger-block this }}
-        {{/if}}
+        {{#unless devoured}}
+        {{> burgers/burger-block this}}
+        {{/unless}}
         {{/each}}
 
       </li>
@@ -52,9 +52,9 @@
     <ol class="list-group">
       <li class="list-group-item">
         {{#each burgers}}
-        {{#unless devoured}}
+        {{#if devoured}}
         {{> burgers/burger-block this}}
-        {{/unless}}
+        {{/if}}
         {{/each}}
       </li>
     </ol>
