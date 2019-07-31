@@ -1,0 +1,14 @@
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: lightcoral
+}
+
+.label {
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
